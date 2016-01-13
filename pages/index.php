@@ -6,6 +6,7 @@
     <title>AchieveCraft - Make Minecraft achievement images</title>
 
     <!-- CSS  -->
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

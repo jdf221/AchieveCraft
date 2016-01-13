@@ -13,6 +13,7 @@ class AchieveCraft{
         require_once $App->config("paths")['backend']['Database'];
         $this->Database = new Database();
 
+        require_once $App->config("paths")['backend']['HttpClient'];
         require_once $App->config("paths")['backend']['GoogleAnalyticsMiddleware'];
         $App->add(new \GoogleAnalyticsMiddleware());
     }

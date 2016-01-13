@@ -1,14 +1,27 @@
 <?php
 
+$analyticsTrack = "";
+$allowedDomains = array('example.com', 'i.example.com');
+if (!isset($_SERVER['HTTP_HOST']) || !in_array($_SERVER['HTTP_HOST'], $allowedDomains)) {
+    echo "Error 400. Bad request.";
+    $AchieveCraftApp->response->setStatus(400);
+    die();
+}
+else{
+    $domain = $_SERVER['HTTP_HOST'];
+    $analyticsTrack = "analytics tracking code";
+}
+
 return array(
-    "index" => "http://dev.achievecraft.net/",
-    "domain" => "dev.achievecraft.net",
+    "index" => "https://".$domain."/",
+    "domain" => $domain,
 
     "allowCacheOption" => false,
 
     "GoogleAnalytics" => array(
-        "trackingId" => null,
-        "customerId" => null
+        "enable" => true,
+        "trackingId" => $analyticsTrack,
+        "customerId" => "analytics customer id"
     ),
 
     "defaults" => array(
@@ -31,7 +44,9 @@ return array(
             "Achievement" => $AchieveCraftApp->config("baseDir") . "backend/Achievement.class.php",
             "Icon" => $AchieveCraftApp->config("baseDir") . "backend/Icon.class.php",
             "CacheWrapper" => $AchieveCraftApp->config("baseDir") . "backend/CacheWrapper.class.php",
+
             "GoogleAnalyticsMiddleware" => $AchieveCraftApp->config("baseDir") . "backend/GoogleAnalyticsMiddleware.class.php",
+            "HttpClient" => $AchieveCraftApp->config("baseDir") . "backend/vender/theiconic/php-ga-measurement-protocol/CustomHttpClient.php",
         ),
         "pages" => array(
             "index" => $AchieveCraftApp->config("baseDir") . "pages/index.php"

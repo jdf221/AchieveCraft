@@ -13,6 +13,10 @@ $AchievementRoute = function ($iconId, $topText, $bottomText) use ($AchieveCraft
         $bottomText = substr($bottomText, 0, -4);
     }
 
+    if (substr($bottomText, -3) == "mca") {
+        $bottomText = substr($bottomText, 0, -3);
+    }
+
     $Icon = $AchieveCraft->Icon($cache);
     $Icon->setIconId($iconId);
 
