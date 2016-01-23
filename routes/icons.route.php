@@ -18,6 +18,7 @@ $AchieveCraft->App()->get('/api/get/icon/:iconId(/)', function ($iconId) use($Ac
         $AchieveCraft->App()->expires('+1 week');
     }
     $AchieveCraft->App()->response->headers->set('Content-Type', 'image/png');
+    $AchieveCraft->App()->expires('+1 week');
 
     imagepng($Icon->getImage());
 })->name('Get Icon');

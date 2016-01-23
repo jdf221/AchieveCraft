@@ -12,6 +12,7 @@ $AchieveCraft->App()->get('/api/get/groups(/)', function () use($AchieveCraft){
 
 $AchieveCraft->App()->get('/api/get/group/:groupId(/)', function ($groupId) use($AchieveCraft){
     $AchieveCraft->App()->response->headers->set('Content-Type', 'application/json');
+    $AchieveCraft->App()->expires('+1 week');
     try{
         echo json_encode($AchieveCraft->getGroup($groupId));
     }
