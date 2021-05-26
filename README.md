@@ -1,17 +1,17 @@
 # AchieveCraft.net
-### Very old project of mine from when I was 15 in 10th grade.
+### Very old project of mine from when I was 15 years old in 10th grade.
 I was decently experienced in PHP at the time but semi new to JS.
 
 I've put the site up at https://achievecraft.jdf2.org. This site was used to generate Minecraft achievement images which people would use in their signatures. Using PHP GD library to add text and an icon over an image and serving that image dynamically based on the text passed in via the URL.
 
 The JS used to run the preview and icon selector on the home page I was pretty proud of. Using jQuery cause it was 2016 and that was still hip.
-https://github.com/jdf221/AchieveCraft/blob/master/public/js/init.js
+[init.js](public/js/init.js)
 
 Although looking at it now I apparently wasn't proud of it back then according to my comments. But honestly it's not horrible.
 
 The PHP code is eh ok, everyone hates looking at code from when they were first starting out. It's pretty ok though used MongoDB to store icons uploaded, had a cache so images wouldn't need to be regenerated, abstracted away the database interaction from the actual generation code. I think this was when I was really starting to grasp good project design ideas like seperation of concerns. Although the MongoDB code isn't amazing.
 
-I also ran a URL shortener for this because people had limited characters in their forum signatures which is where these images were used. I've uploaded that here: 
+I also ran a URL shortener for this because people had limited characters in their forum signatures which is where these images were used. I've uploaded that here: [urlShortener/index.php](urlShortener/index.php)
 
 ___
 ### Original Readme
