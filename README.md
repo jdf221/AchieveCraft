@@ -1,7 +1,4 @@
 # AchieveCraft.net
-## Remake of achievecraft.com
-
----
 ### Very old project of mine from when I was 15 in 10th grade.
 I was decently experienced in PHP at the time but semi new to JS.
 
