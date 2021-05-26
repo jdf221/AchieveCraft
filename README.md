@@ -17,12 +17,6 @@ ___
 ### Original Readme
 ---
 
-Because achievecraft.com is no longer up.
-
-(Does not include avatars anymore because [there](https://crafatar.com/) [are](http://visage.surgeplay.com/) [tons](https://minotar.net/) [of](https://pixelface.net/) [alternatives](http://mcapi.ca/examples/avatar-api). Requests to old avatar paths will redirect to mc-heads.net)
-
-___
-
 ## How are the achievements made?
 
 The achievements are made in /backend/Achievement.class.php
